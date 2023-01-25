@@ -1,0 +1,13 @@
+body{
+    background-image: url("/src/main/resources/static/Multimedia/FondoIndex.jpg");
+
+}
+#fondo{
+background-color: black;
+border-radius: 40px;
+}
+
+button{
+
+    border-radius: 40px;   
+}
