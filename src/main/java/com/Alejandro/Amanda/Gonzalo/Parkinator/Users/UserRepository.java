@@ -5,11 +5,11 @@ public class UserRepository {
 
     private ArrayList<User> usuarios;
     public UserRepository() {
-        User = new ArrayList<>();
+        usuarios  = new ArrayList<>();
     }
     public ArrayList<User> getAll() {
         this.usuarios.clear();
-        this.usuarios.add(new User("email:anavrod125@g.educaand.es","name:Amanda Navas Rodriguez"));
+        this.usuarios.add(new User("Manolo", "El del Bombo", "Ortega", "Profesor"));
         return this.usuarios;
     }
 
