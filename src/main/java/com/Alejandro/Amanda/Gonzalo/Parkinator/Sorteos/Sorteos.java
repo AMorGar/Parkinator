@@ -1,4 +1,5 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos;
+
 public class Sorteos {
 
     private String Estado;
@@ -7,10 +8,10 @@ public class Sorteos {
 
     public Sorteos(String Estado, String Descripcion, String Fecha) {
         this.Estado = Estado;
-        this.Descripcion = Estado;
+        this.Descripcion = Descripcion;
         this.Fecha = Fecha;
     }
-    
+
     public String getEstado() {
         return this.Estado;
     }
@@ -29,5 +30,9 @@ public class Sorteos {
 
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
+    }
+
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
     }
 }

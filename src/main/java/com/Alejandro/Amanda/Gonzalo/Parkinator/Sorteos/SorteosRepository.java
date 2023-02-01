@@ -9,7 +9,10 @@ public class SorteosRepository {
     }
     public ArrayList<Sorteos> getAll() {
         this.Sorteos.clear();
-        this.Sorteos.add(new Sorteos(null, null, null));
+        this.Sorteos.add(new Sorteos("Activo", "null", ""));
         return this.Sorteos;
+    }
+    public Object findAll() {
+        return null;
     }
 }
