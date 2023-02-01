@@ -15,4 +15,37 @@ public class TestUser {
 		assertEquals(expected,actual);
 	}
 
+	@Test
+	public void check_user_apellido1() {
+
+		User ale= new User("David", "Perez", "Rios", "profesor");
+		String expected= "Perez";
+
+		String actual= ale.getApellido1();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_user_apellido2() {
+
+		User ale= new User("David", "Perez", "Rios", "profesor");
+		String expected= "Rios";
+
+		String actual= ale.getApellido2();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_user_rol() {
+
+		User ale= new User("David", "Perez", "Rios", "profesor");
+		String expected= "profesor";
+
+		String actual= ale.getRol();
+
+		assertEquals(expected,actual);
+	}
+
 }
