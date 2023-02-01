@@ -9,7 +9,7 @@ public class SorteosRepository {
     }
     public ArrayList<Sorteos> getAll() {
         this.Sorteos.clear();
-        this.Sorteos.add(new Sorteos("Activo", "null", ""));
+        this.Sorteos.add(new Sorteos("Activo", "Primer Sorteo", "01/02/2023"));
         return this.Sorteos;
     }
     public Object findAll() {
