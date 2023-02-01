@@ -48,4 +48,52 @@ public class TestUser {
 		assertEquals(expected,actual);
 	}
 
+	@Test
+	public void check_change_user_name() {
+
+		User ale = new User("David", "Perez", "Rios", "profesor");
+		ale.setNombre("Alejandro");
+		String expected= "Alejandro";
+
+		String actual= ale.getNombre();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_change_apellido1() {
+
+		User ale = new User("David", "Perez", "Rios", "profesor");
+		ale.setApellido1("Moreno");
+		String expected= "Moreno";
+
+		String actual= ale.getApellido1();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_change_apellido2() {
+
+		User ale = new User("David", "Perez", "Rios", "profesor");
+		ale.setApellido2("Garrido");
+		String expected= "Garrido";
+
+		String actual= ale.getApellido2();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_change_rol() {
+
+		User ale = new User("David", "Perez", "Rios", "profesor");
+		ale.setRol("alumno");
+		String expected= "alumno";
+
+		String actual= ale.getRol();
+
+		assertEquals(expected,actual);
+	}
+
 }
