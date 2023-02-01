@@ -41,5 +41,9 @@ public class User {
         this.rol = rol;
     }
 
+    public String getFirstName() {
+        return null;
+    }
+
 
 }
