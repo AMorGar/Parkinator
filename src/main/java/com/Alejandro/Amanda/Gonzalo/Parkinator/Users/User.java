@@ -1,17 +1,31 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Users;
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String nombre;
     private String apellido1;
     private String apellido2;
     private String rol;
 
     public User(String nombre, String apellido1, String apellido2, String rol) {
+        
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
         this.rol = rol;
+    }
+
+    public Integer getId() {
+        return this.id;
     }
 
     public String getNombre() {
