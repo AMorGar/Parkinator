@@ -8,10 +8,24 @@
 </head>
 <body>
     <h1>Lista de sorteos</h1>
-    <ul th:each="Sorteos: ${Sorteos}">
-        <li>
-            <p th:text="${Sorteos.name}"></p>
-        </li>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Estado
+                </td>
+                <td>
+                    Fecha
+                </td>
+                <td>
+                    Descripcion
+                </td>
+            </tr>
+        </thead>
+    <tr th:each="Sorteos: ${Sorteos}">
+        <td th:text="${Sorteos.Estado}"></td>
+        <td th:text="${Sorteos.Fecha}"></td>
+        <td th:text="${Sorteos.Descripcion}"></td>
+</table>
 </body>
 </html>
