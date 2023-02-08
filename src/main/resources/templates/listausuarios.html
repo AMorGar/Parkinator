@@ -9,10 +9,21 @@
 <body>
     <h1> Nota para el grupo: 1</h1>
     <hl>
-        <ul th:each="usuarios: ${usuarios}">
-            <li>
-                <p th:text="${usuarios.name}"></p>
-            </li>
-        </ul>
+        <!-- ul por table -->
+        <table>
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="usuario: ${usuarios}">
+                <td th:text="${usuario.nombre}"></td>
+                <td th:text="${usuario.apellido1}"></td>
+                <td th:text="${usuario.apellido2}"></td>
+                <td th:text="${usuario.rol}"></td>
+            </tr>
+        </tbody>
+        </table>
 </body>
 </html>
