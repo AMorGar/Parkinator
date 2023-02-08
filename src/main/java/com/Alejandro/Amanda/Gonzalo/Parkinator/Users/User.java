@@ -1,7 +1,15 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Users;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String nombre;
     private String apellido1;
     private String apellido2;
