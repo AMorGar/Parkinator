@@ -9,6 +9,20 @@ import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.Sorteos;
 public class TestSorteos {
     
     @Test
+    public void check_Sorteos_idSorteo() {
+        // Arrange
+        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
+        String expected = "123456789";
+
+        // Act
+        String actual = Primero.getidSorteo();
+
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void check_Sorteos_Estado() {
         // Arrange
         Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
