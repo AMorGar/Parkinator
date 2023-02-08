@@ -1,14 +1,21 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Sorteos {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String idSorteo;
     private String Estado;
     private String Descripcion;
     private String Fecha;
 
     public Sorteos(String Estado, String Descripcion, String Fecha) {
-     
         this.Estado = Estado;
         this.Descripcion = Descripcion;
         this.Fecha = Fecha;
