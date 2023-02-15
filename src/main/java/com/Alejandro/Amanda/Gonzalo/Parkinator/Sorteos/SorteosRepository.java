@@ -1,6 +1,8 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos;
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Repository;
+@Repository
 public class SorteosRepository {
     
     private ArrayList<Sorteos> Sorteos;
