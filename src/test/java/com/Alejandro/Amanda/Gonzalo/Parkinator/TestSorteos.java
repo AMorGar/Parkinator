@@ -7,10 +7,7 @@ import org.junit.jupiter.api.Test;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.Sorteos;
 
 public class TestSorteos {
-<<<<<<< HEAD
-=======
     
-
 
     @Test
     public void check_Sorteos_Estado() {
