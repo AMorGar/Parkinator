@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.Sorteos;
 
 public class TestSorteos {
+<<<<<<< HEAD
+=======
+    
+   
+   
+    
+>>>>>>> 206211f9196f73e32b81c5ebeee2d7f4c7adbc6b
 
     @Test
     public void check_Sorteos_Estado() {
