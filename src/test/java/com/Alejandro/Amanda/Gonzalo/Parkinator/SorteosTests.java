@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.Sorteos;
 
-public class TestSorteos {
+public class SorteosTests {
     
 
 
