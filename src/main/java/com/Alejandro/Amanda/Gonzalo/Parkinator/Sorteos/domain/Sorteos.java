@@ -1,4 +1,4 @@
-package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos;
+package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

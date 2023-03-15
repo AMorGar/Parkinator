@@ -1,4 +1,4 @@
-package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos;
+package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
@@ -14,7 +14,7 @@ public class SorteosRepository {
         this.Sorteos.add(new Sorteos("Activo", "Primer Sorteo", "01/02/2023"));
         return this.Sorteos;
     }
-    public Object findAll() {
+    public Iterable<com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Sorteos> findAll() {
         return null;
     }
 }
