@@ -1,4 +1,4 @@
-package com.Alejandro.Amanda.Gonzalo.Parkinator.Users;
+package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
 public class UserDao {
     

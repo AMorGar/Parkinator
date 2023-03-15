@@ -1,22 +1,28 @@
-package com.Alejandro.Amanda.Gonzalo.Parkinator.Users;
+package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.adapter;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.UserDao;
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.service.UserService;
+
+
 @Controller
 public class UserController {
 
-    @Autowired
-    private UserRepository repositorio;
+    private UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/Users")
     public String showUsers(Model model) {
-        model.addAttribute("usuarios", repositorio.getAll());
-        return "listausuarios";
+        model.addAttribute("usuarios", userService.getAll());
+        return "User/listausuarios";
     }
 
     @GetMapping("/CreateUser")

@@ -1,4 +1,4 @@
-package com.Alejandro.Amanda.Gonzalo.Parkinator.Users;
+package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
@@ -15,5 +15,7 @@ public class UserRepository {
         this.usuarios.add(new User("Manolo", "El del Bombo", "Ortega", "Profesor"));
         return this.usuarios;
     }
-
+    public Iterable<com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.User> findAll() {
+        return null;
+    }
 }
