@@ -9,37 +9,33 @@
 
 <body>
   <header>
-    <center> <a href="../Index/Index.html">
-        <div id="cabeza"></div>
-      </a> </center>
+    <center> <a href="../static/Index.html"></center>
   </header>
   <section> <br>
-    <div id="fondo">
+    <div>
       <center>
         <div class="text" style="width: 1182.78px; margin-left: 251px;">
           <center>
             <h2>Formulario Parkinator</h2>
 
-            <body id="fpanta">
+            <body>
 
               <div>
-                <form action="" method="get"></form>
+                <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}"></form>
                 <div>
-                  <fieldset id="acero">
+
                     <legend>Datos personales:</legend>
 
-                    <p>Nombre del Usuario: <input type="text" name="nombre" size="40"
-                        placeholder="Escriba su nombre y sus dos apellidos"></p>
-                    <p>DNI del Usuario: <input type="text" name="ID" size="40" placeholder="Escriba su DNI"></p>
-                    <p>Marca y modelo del vehiculo: <input type="text" name="MarcaYModelo" size="30"
-                        placeholder="Marca y modelo"></p>
-                    <p>Matricula del vehiculo: <input type="text" name="matricula" size="12"
-                        placeholder="Matricula del vehiculo"></p>
-                    <p>Año de nacimiento: <input type="date" name="fecha"></p>
-                    <p> Añada algun dato a tener en cuenta: </p>
-                    <textarea name="comentarios" id="comentarios" cols="100" rows="10"
-                      placeholder="Haga una breve descripción de usted"></textarea>
-                  </fieldset>
+                    <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
+
+                    
+                    <p>Apellido1: <input type="text" name="nombre" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
+
+                          
+                    <p>Apellido2: <input type="text" name="nombre" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
+
+                    <p>rol: <input type="text" name="nombre" size="40" placeholder="estudiante/profesor"></p> 
+           
                   <p>
                     <button>
                       <img src="enviar.PNG" alt="imagen" width="32" height="32" style="vertical-align: middle">
@@ -50,10 +46,7 @@
                       Borrar
                     </button>
                   </p>
-
-
                   </form>
-
                 </div>
           </center>
         </div>
