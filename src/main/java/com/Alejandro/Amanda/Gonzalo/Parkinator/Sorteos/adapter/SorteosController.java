@@ -29,7 +29,7 @@ public class SorteosController {
     SorteosDao sorteosDao= new SorteosDao();
     model.addAttribute("sorteosDao",sorteosDao);
         return "Sorteos/formulariosorteos";
-    }s
+    }
 
     @PostMapping("/CreateSorteos")
     public String createUser(@ModelAttribute  SorteosDao sorteosDao ){
