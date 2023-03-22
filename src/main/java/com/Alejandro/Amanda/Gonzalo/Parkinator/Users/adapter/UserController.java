@@ -35,7 +35,7 @@ public class UserController {
     @PostMapping("/CreateUser")
     public String createUser(@ModelAttribute  UserDao userDao ){
 
-        
+        this.userService.register(userDao);
     return "redirect:/Users"; 
     }
 
