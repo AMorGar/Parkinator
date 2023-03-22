@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es-ES">
 
 <head>
@@ -21,18 +21,18 @@
             <body>
 
               <div>
-                <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}"></form>
-                <div>
+                <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}">
+                
 
                     <legend>Datos personales:</legend>
 
                     <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
 
                     
-                    <p>Apellido1: <input type="text" name="nombre" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
+                    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
 
                           
-                    <p>Apellido2: <input type="text" name="nombre" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
+                    <p>Apellido2: <input type="text" name="apellido2" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
 
                     <p>rol: <input type="text" name="nombre" size="40" placeholder="estudiante/profesor"></p> 
            
@@ -64,4 +64,32 @@
   </footer>
 </body>
 
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}">
+                
+
+    <legend>Datos personales:</legend>
+
+    <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
+
+    
+    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
+
+          
+    <p>Apellido2: <input type="text" name="apellido2" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
+    <label>Rol</label>
+    <input type="text" name="nombre" size="40" placeholder="estudiante/profesor">
+    <button type="submit">Guardar</button>
+  </form>
+</body>
 </html>
