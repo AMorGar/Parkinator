@@ -5,4 +5,5 @@ import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.*;
 public interface SorteosService {
     
     public Iterable<Sorteos> getAll();
+    public void register(SorteosDao sorteosDao);
 }

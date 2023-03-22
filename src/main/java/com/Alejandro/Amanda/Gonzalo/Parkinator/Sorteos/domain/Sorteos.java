@@ -20,6 +20,10 @@ public class Sorteos {
         this.Descripcion = Descripcion;
         this.Fecha = Fecha;
     }
+    public Sorteos() {
+
+        
+    }
 
     public String getEstado() {
         return this.Estado;
