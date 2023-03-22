@@ -27,14 +27,14 @@ public class SorteosController {
     @GetMapping("/CreateSorteos")
     public String showUserForm(Model model) {
     SorteosDao sorteosDao= new SorteosDao();
-    model.addAttribute("userDao",sorteosDao);
-        return "formulario";
-    }
+    model.addAttribute("sorteosDao",sorteosDao);
+        return "Sorteos/formulariosorteos";
+    }s
 
     @PostMapping("/CreateSorteos")
     public String createUser(@ModelAttribute  SorteosDao sorteosDao ){
 
         this.sorteosService.register(sorteosDao);
-    return "redirect:/Sorteos"; 
+    return "redirect:Sorteos/ListaSorteos"; 
     }
 }
