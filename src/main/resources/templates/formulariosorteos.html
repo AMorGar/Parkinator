@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" method="post" th:action="@{/CreateSorteos}" th:object="${SorteosDao}">
+                
+
+    <legend>Datos personales:</legend>
+
+    <p>Estado del sorteo: <input type="text" name="Estado" size="40" placeholder="Escriba el estado del sorteo" th:field="*{Estado}"></p>
+
+    
+    <p>Descripcion: <input type="text" name="Descripcion" size="40" placeholder="Escriba una descripción breve" th:field="*{Descripcion}"></p>
+
+          
+    <p>Fecha: <input type="text" name="Fecha" size="40" placeholder="Escriba la fecha del sorteo" th:field="*{Fecha}"></p>
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>
