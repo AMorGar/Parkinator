@@ -1,7 +1,7 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.User;
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.User;
 public class UserTests {
 
 	@Test
