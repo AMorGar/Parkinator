@@ -23,6 +23,10 @@ public class User {
         this.apellido2 = apellido2;
         this.rol = rol;
     }
+    public User() {
+        
+ 
+    }
 
     public Integer getId() {
         return this.id;

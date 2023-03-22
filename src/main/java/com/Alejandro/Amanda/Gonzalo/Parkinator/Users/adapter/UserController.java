@@ -22,7 +22,7 @@ public class UserController {
     @GetMapping("/Users")
     public String showUsers(Model model) {
         model.addAttribute("usuarios", userService.getAll());
-        return "User/listausuarios";
+        return "User/listausuarios"; 
     }
 
     @GetMapping("/CreateUser")
@@ -35,7 +35,7 @@ public class UserController {
     @PostMapping("/CreateUser")
     public String createUser(@ModelAttribute  UserDao userDao ){
 
-        
+        this.userService.register(userDao);
     return "redirect:/Users"; 
     }
 
