@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table style="width: 50%" border="1">
+        <thead>
+            <td colspan="3"><h1><span style="color: aqua;">Lista de sorteos</span></h1></td>
+            <tr>
+                <td><span style="color:aqua">
+                    Estado
+                </span></td>
+                <td><span style="color:aqua">
+                    Fecha
+                </span></td>
+                <td><span style="color:aqua">
+                    Descripcion
+                </span></td>
+            </tr>
+        </thead>
+    <tr th:each="Sorteos: ${Sorteos}">
+        <td th:text="${Sorteos.Estado}"></td>
+        <td th:text="${Sorteos.Fecha}"></td>
+        <td th:text="${Sorteos.Descripcion}"></td>
+    </tr>    
+</table>
+</body>
+</html>

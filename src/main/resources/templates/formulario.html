@@ -1,0 +1,94 @@
+<!--<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <link rel="shortcut icon" href="">
+  <title>Parkinator</title>
+</head>
+
+<body>
+  <header>
+    <center> <a href="../static/Index.html"></center>
+  </header>
+  <section> <br>
+    <div>
+      <center>
+        <div class="text" style="width: 1182.78px; margin-left: 251px;">
+          <center>
+            <h2>Formulario Parkinator</h2>
+
+            <body>
+
+              <div>
+                <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}">
+                
+
+                    <legend>Datos personales:</legend>
+
+                    <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
+
+                    
+                    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
+
+                          
+                    <p>Apellido2: <input type="text" name="apellido2" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
+
+                    <p>rol: <input type="text" name="nombre" size="40" placeholder="estudiante/profesor"></p> 
+           
+                  <p>
+                    <button>
+                      <img src="enviar.PNG" alt="imagen" width="32" height="32" style="vertical-align: middle">
+                      Enviar
+                    </button>
+                    <button type="reset">
+                      <img src="borrar.PNG" alt="imagen" width="32" height="32" style="vertical-align: middle">
+                      Borrar
+                    </button>
+                  </p>
+                  </form>
+                </div>
+          </center>
+        </div>
+      </center>
+  </section>
+  <br>
+  <footer>
+    <center>
+      <div id="footer" style="height: 122px;">
+        <h5>
+          <p>Creadores: Alejandro Moreno Garrido, Amanda Navas Rodriguez, Gonzalo Ruiz Azuar</p>
+        </h5>
+      </div>
+    </center>
+  </footer>
+</body>
+
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" method="post" th:action="@{/CreateUser}" th:object="${userDao}">
+                
+
+    <legend>Datos personales:</legend>
+
+    <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
+
+    
+    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
+
+          
+    <p>Apellido2: <input type="text" name="apellido2" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
+    <p>Rol: <input type="text" name="Rol" size="40" placeholder="Alumno o profesor" th:field="*{rol}"></p>
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>
