@@ -8,10 +8,22 @@ import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Sorteos;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.SorteosDao;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.SorteosRepository;
 
+/**
+ * @author Gonzalo Ruiz Azuar
+ * @author Alejandro Moreno Garrido
+ * @author Amanda Navas
+ * @version V0.0.1
+ */
+
 @Service
 public class SorteosServiceImpl implements SorteosService {
 
     private SorteosRepository sorteosRepository;
+
+    /**
+     * 
+     * @param sorteosRepository Devuelve el repositorio de sorteos
+     */
 
     @Autowired
     public SorteosServiceImpl(SorteosRepository sorteosRepository){
