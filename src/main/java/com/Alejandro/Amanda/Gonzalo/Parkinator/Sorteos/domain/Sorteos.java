@@ -18,7 +18,7 @@ public class Sorteos {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String idSorteo;
-    private String Estado;
+    private Status Estado;
     private String Descripcion;
     private String Fecha;
 
@@ -29,7 +29,7 @@ public class Sorteos {
      * @param Fecha
      */
 
-    public Sorteos(String Estado, String Descripcion, String Fecha) {
+    public Sorteos(Status Estado, String Descripcion, String Fecha) {
         this.Estado = Estado;
         this.Descripcion = Descripcion;
         this.Fecha = Fecha;
@@ -44,7 +44,7 @@ public class Sorteos {
      * @return Devuelve los datos de la variable Estado 
      */
 
-    public String getEstado() {
+    public Status getEstado() {
         return this.Estado;
     }
 
@@ -80,7 +80,7 @@ public class Sorteos {
      * @param Estado Guarda datos dentro de la variable Estado
      */
 
-    public void setEstado(String Estado) {
+    public void setEstado(Status Estado) {
         this.Estado = Estado;
     }
 
