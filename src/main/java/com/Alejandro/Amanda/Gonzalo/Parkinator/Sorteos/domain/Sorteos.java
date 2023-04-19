@@ -1,9 +1,12 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
 
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 /**
  * @author Gonzalo Ruiz Azuar
@@ -19,6 +22,7 @@ public class Sorteos {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String idSorteo;
     private Status Estado;
+    @ManyToMany(mappedBy = "includedIn")
     private String Descripcion;
     private String Fecha;
 
@@ -101,4 +105,7 @@ public class Sorteos {
     public void setFecha(String Fecha) {
         this.Fecha = Fecha;
     }
+
+    @ManyToMany(mappedBy ="includedSorteo")
+private Set<Sorteos> includeUser;
 }
