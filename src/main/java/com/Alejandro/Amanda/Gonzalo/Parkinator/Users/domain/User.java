@@ -14,9 +14,9 @@ public class User {
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private String rol;
+    private Role rol;
 
-    public User(String nombre, String apellido1, String apellido2, String rol) {
+    public User(String nombre, String apellido1, String apellido2, Role rol) {
         
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -24,8 +24,6 @@ public class User {
         this.rol = rol;
     }
     public User() {
-        
- 
     }
 
     public Integer getId() {
@@ -41,7 +39,7 @@ public class User {
     public String getApellido2() {
         return this.apellido2;
     }
-    public String getRol() {
+    public Role getRol() {
         return this.rol;
     }
 
@@ -55,8 +53,8 @@ public class User {
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
     }
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRol(Role string) {
+        this.rol = string;
     }
 
     public String getFirstName() {
