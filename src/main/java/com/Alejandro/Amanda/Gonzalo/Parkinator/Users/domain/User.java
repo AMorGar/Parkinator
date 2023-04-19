@@ -1,9 +1,14 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
+import java.util.Set;
+
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 /**
  * Clase de acceso a datos de Usuario
  * @author Alejandro Moreno Garrido
@@ -21,6 +26,7 @@ public class User {
     private Integer id;
     private String nombre;
     private String apellido1;
+    @ManyToMany(mappedBy = "includedIn")
     private String apellido2;
     private Role rol;
 /**
@@ -111,6 +117,7 @@ public class User {
     public String getFirstName() {
         return null;
     }
-
+@ManyToMany(mappedBy ="includedSorteo")
+private Set<User> includeUser;
     
 }
