@@ -22,7 +22,7 @@ public class User {
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private String rol;
+    private Role rol;
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
@@ -30,7 +30,7 @@ public class User {
  * @param apellido2 Este parametro iguala su valor al de la variable apellido2
  * @param rol Este parametro iguala su valor al de la variable rol
  */
-    public User(String nombre, String apellido1, String apellido2, String rol) {
+    public User(String nombre, String apellido1, String apellido2, Role rol) {
         
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -39,7 +39,6 @@ public class User {
     }
 
     public User() {
-
     }
 /**
  * Devuelve lo almacenado en el parametro
@@ -73,7 +72,7 @@ public class User {
  * Devuelve lo almacenado en el parametro
  * @return Devuelve los parametros guardados en el parametro rol
  */
-    public String getRol() {
+    public Role getRol() {
         return this.rol;
     }
 
@@ -102,8 +101,8 @@ public class User {
  * Iguala el parametro a lo introducido
  * @param rol Este parametro guarda los datos de la variable rol
  */
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRol(Role string) {
+        this.rol = string;
     }
 /**
  * Iguala el parametro a lo introducido

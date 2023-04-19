@@ -2,7 +2,7 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.service;
 
 import org.junit.jupiter.api.Test;
 
-
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.Role;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.User;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.UserRepository;
 
@@ -16,7 +16,7 @@ public class UserServiceTest {
     void testGetAll() {
 
         List<User> expectedUsers = new ArrayList<>();
-        expectedUsers.add(new User("Amanda","Navas","Rodríguez","Alumna"));
+        expectedUsers.add(new User("Amanda","Navas","Rodríguez",Role.STUDENT));
         UserRepository mockRepository = mock(UserRepository.class);
         when(mockRepository.findAll()).thenReturn(expectedUsers);
 
