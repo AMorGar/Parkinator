@@ -2,11 +2,15 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
 import java.util.Set;
 
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Sorteos;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 /**
  * Clase de acceso a datos de Usuario
@@ -22,13 +26,21 @@ public class User {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String email;
+
     private Integer id;
     @Column(unique = true)
     private String nombre;
     private String apellido1;
     private String apellido2;
     private Role role;
+    private String email;
+    @ManyToMany
+    @JoinTable(
+        name="users_assigned",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "sorteo_id")
+    )
+    private Set<Sorteos> includedIn; 
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
@@ -132,7 +144,6 @@ public void setEmail(String email) {
     public String getFirstName() {
         return null;
     }
-@ManyToMany(mappedBy ="includedSorteo")
-private Set<User> includeUser;
+
     
 }
