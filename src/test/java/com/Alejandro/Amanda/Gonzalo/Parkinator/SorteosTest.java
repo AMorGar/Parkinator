@@ -2,21 +2,32 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Sorteos;
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Status;
 
-public class TestSorteos {
+public class SorteosTest {
+	
+    
+    private Sorteos Primero;
+	@BeforeEach
+	public void prepare(){
+		Primero = new Sorteos(Status.PENDIENTE, "Primer Sorteo", "01/02/2023");
+
+	}
+
 
 
     @Test
     public void check_Sorteos_Estado() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
-        String expected = "Activo";
+
+        Status expected =Status.PENDIENTE;
 
         // Act
-        String actual = Primero.getEstado();
+        Status actual = Primero.getEstado();
 
 
         // Assert
@@ -26,7 +37,6 @@ public class TestSorteos {
     @Test
     public void check_Sorteos_Fecha() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
         String expected = "01/02/2023";
 
         // Act
@@ -40,7 +50,6 @@ public class TestSorteos {
     @Test
     public void check_Sorteos_Descripcion() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
         String expected = "Primer Sorteo";
 
         // Act
@@ -54,12 +63,11 @@ public class TestSorteos {
     @Test
     public void check_change_Sorteos_Estado() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
-        Primero.setEstado("Terminado");
-        String expected = "Terminado";
+  
+        Status expected = Status.PENDIENTE;
 
         // Act
-        String actual = Primero.getEstado();
+        Status actual = Primero.getEstado();
 
 
         // Assert
@@ -69,7 +77,6 @@ public class TestSorteos {
     @Test
     public void check_change_Sorteos_Fecha() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
         Primero.setFecha("08/01/2023");
         String expected = "08/01/2023";
 
@@ -84,7 +91,6 @@ public class TestSorteos {
     @Test
     public void check_change_Sorteos_Descripcion() {
         // Arrange
-        Sorteos Primero = new Sorteos("Activo", "Primer Sorteo", "01/02/2023");
         Primero.setFecha("Sorteo Torneo Fútbol");
         String expected = "Sorteo Torneo Fútbol";
 

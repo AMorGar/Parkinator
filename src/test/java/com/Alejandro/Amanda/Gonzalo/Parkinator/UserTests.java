@@ -1,13 +1,21 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.Role;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.User;
 public class UserTests {
 
+	private User ale;
+	@BeforeEach
+	public void prepare(){
+		ale = new User("prueba@pruebacom","David", "Perez", "Rios", Role.PROFESSOR);
+	}
+
 	@Test
 	public void check_user_name() {
-
-		User ale= new User("David", "Perez", "Rios", "profesor");
 		String expected= "David";
 
 		String actual= ale.getNombre();
@@ -16,9 +24,16 @@ public class UserTests {
 	}
 
 	@Test
-	public void check_user_apellido1() {
+	public void check_email() {
+		String expected= "prueba@pruebacom";
 
-		User ale= new User("David", "Perez", "Rios", "profesor");
+		String actual= ale.getEmail();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_user_apellido1() {
 		String expected= "Perez";
 
 		String actual= ale.getApellido1();
@@ -28,8 +43,6 @@ public class UserTests {
 
 	@Test
 	public void check_user_apellido2() {
-
-		User ale= new User("David", "Perez", "Rios", "profesor");
 		String expected= "Rios";
 
 		String actual= ale.getApellido2();
@@ -39,19 +52,15 @@ public class UserTests {
 
 	@Test
 	public void check_user_rol() {
+		Role expected= Role.PROFESSOR;
 
-		User ale= new User("David", "Perez", "Rios", "profesor");
-		String expected= "profesor";
-
-		String actual= ale.getRol();
+		Role actual= ale.getRole();
 
 		assertEquals(expected,actual);
 	}
 
 	@Test
 	public void check_change_user_name() {
-
-		User ale = new User("David", "Perez", "Rios", "profesor");
 		ale.setNombre("Alejandro");
 		String expected= "Alejandro";
 
@@ -59,11 +68,19 @@ public class UserTests {
 
 		assertEquals(expected,actual);
 	}
+	@Test
+	public void check_change_email() {
+		ale.setEmail("pruebita@pruebacom");
+		String expected= "pruebita@pruebacom";
+
+		String actual= ale.getEmail();
+
+		assertEquals(expected,actual);
+	}
+
 
 	@Test
 	public void check_change_apellido1() {
-
-		User ale = new User("David", "Perez", "Rios", "profesor");
 		ale.setApellido1("Moreno");
 		String expected= "Moreno";
 
@@ -74,8 +91,6 @@ public class UserTests {
 
 	@Test
 	public void check_change_apellido2() {
-
-		User ale = new User("David", "Perez", "Rios", "profesor");
 		ale.setApellido2("Garrido");
 		String expected= "Garrido";
 
@@ -86,12 +101,10 @@ public class UserTests {
 
 	@Test
 	public void check_change_rol() {
+		ale.setRol(Role.STUDENT);
+		Role expected= Role.STUDENT;
 
-		User ale = new User("David", "Perez", "Rios", "profesor");
-		ale.setRol("alumno");
-		String expected= "alumno";
-
-		String actual= ale.getRol();
+		Role actual= ale.getRole();
 
 		assertEquals(expected,actual);
 	}

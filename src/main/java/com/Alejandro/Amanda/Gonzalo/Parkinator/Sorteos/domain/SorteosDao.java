@@ -1,4 +1,10 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
+/**
+ * @author Gonzalo Ruiz Azuar
+ * @author Alejandro Moreno Garrido
+ * @author Amanda Navas
+ * @version v0.0.1
+ */
 
 public class SorteosDao {
 
@@ -10,6 +16,13 @@ public class SorteosDao {
 
         this("","","");
     }
+
+    /**
+     * 
+     * @param Estado
+     * @param Descripcion
+     * @param Fecha
+     */
     
     public SorteosDao(String Estado, String Descripcion, String Fecha) {
         this.Estado = Estado;
@@ -17,26 +30,55 @@ public class SorteosDao {
         this.Fecha = Fecha;
     }
 
+    /**
+     * 
+     * @return Devuelve los datos de la variable Estado
+     */
+
     public String getEstado() {
         return this.Estado;
     }
+
+    /**
+     * 
+     * @return Devuelve los datos de la variable Descripcion
+     */
 
     public String getDescripcion() {
         return this.Descripcion;
     }
 
+    /**
+     * 
+     * @return Devuelve los datos de la variable Fecha
+     */
+
     public String getFecha() {
         return this.Fecha;
     }
+
+    /**
+     * 
+     * @param Estado Guarda datos dentro de la variable Estado
+     */
 
 
     public void setEstado(String Estado) {
         this.Estado = Estado;
     }
 
+    /**
+     * @param Descripcion Guarda datos dentro de la variable Descripcion
+     */
+
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
     }
+
+    /**
+     * 
+     * @param Fecha Guarda datos dentro de la variable Fecha
+     */
 
     public void setFecha(String Fecha) {
         this.Fecha = Fecha;
