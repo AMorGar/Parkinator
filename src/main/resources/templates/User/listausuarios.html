@@ -12,6 +12,7 @@
         <table style="width: 50%" border="1">
             <thead>
                 <tr>
+                    <td><span style="color:palevioletred"><b>Email</b></span></td>
                     <td><span style="color:palevioletred"><b>NOMBRE</b></span></td>
                     <td><span style="color:palevioletred"><b>1 APELLIDO</b></span></td>
                     <td><span style="color:palevioletred"><b>2 APELLIDO</b></span></td>
@@ -20,6 +21,7 @@
             </thead>
             <tbody>
             <tr th:each="usuario: ${usuarios}">
+                <td th:text="${usuario.email}"></td>
                 <td th:text="${usuario.nombre}"></td>
                 <td th:text="${usuario.apellido1}"></td>
                 <td th:text="${usuario.apellido2}"></td>

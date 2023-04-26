@@ -17,15 +17,17 @@ public class UserDao {
     private String apellido1;
     private String apellido2;
     private String rol;
+    private String email;
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
  * @param apellido1 Este parametro iguala su valor al de la variable apellido1
  * @param apellido2 Este parametro iguala su valor al de la variable apellido2
  * @param rol Este parametro iguala su valor al de la variable rol
+ * @param emial Este parametro iguala su valor al de la variable emial
  */
-    public UserDao(String nombre, String apellido1, String apellido2, String rol) {
-        
+    public UserDao(String email,String nombre, String apellido1, String apellido2, String rol) {
+        this.email = email;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
@@ -42,6 +44,13 @@ public class UserDao {
     public Integer getId() {
         return this.id;
     }
+/**
+ * Devuelve lo almacenado en el parametro
+ * @return Devuelve los datos guardados en el parametro id
+ */
+public String getEmail() {
+    return this.email;
+}
 /**
  * Devuelve lo almacenado en el parametro
  * @return Devuelve los parametros guardados en el parametro nombre
@@ -78,6 +87,13 @@ public class UserDao {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+/**
+ * Iguala el parametro a lo introducido
+ * @param nombre Este parametro guarda los datos de la variable nombre
+ */
+public void setEmail(String email) {
+    this.email = email;
+}
 /**
  * Iguala el parametro a lo introducido
  * @param apellido1 Este parametro guarda los datos de la variable apellido1

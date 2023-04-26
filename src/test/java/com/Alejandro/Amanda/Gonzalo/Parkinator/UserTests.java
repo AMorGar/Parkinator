@@ -11,7 +11,7 @@ public class UserTests {
 	private User ale;
 	@BeforeEach
 	public void prepare(){
-		User ale = new User("David", "Perez", "Rios", Role.PROFESSOR);
+		ale = new User("prueba@pruebacom","David", "Perez", "Rios", Role.PROFESSOR);
 	}
 
 	@Test
@@ -19,6 +19,15 @@ public class UserTests {
 		String expected= "David";
 
 		String actual= ale.getNombre();
+
+		assertEquals(expected,actual);
+	}
+
+	@Test
+	public void check_email() {
+		String expected= "prueba@pruebacom";
+
+		String actual= ale.getEmail();
 
 		assertEquals(expected,actual);
 	}
@@ -45,7 +54,7 @@ public class UserTests {
 	public void check_user_rol() {
 		Role expected= Role.PROFESSOR;
 
-		Role actual= ale.getRol();
+		Role actual= ale.getRole();
 
 		assertEquals(expected,actual);
 	}
@@ -59,6 +68,16 @@ public class UserTests {
 
 		assertEquals(expected,actual);
 	}
+	@Test
+	public void check_change_email() {
+		ale.setEmail("pruebita@pruebacom");
+		String expected= "pruebita@pruebacom";
+
+		String actual= ale.getEmail();
+
+		assertEquals(expected,actual);
+	}
+
 
 	@Test
 	public void check_change_apellido1() {
@@ -85,7 +104,7 @@ public class UserTests {
 		ale.setRol(Role.STUDENT);
 		Role expected= Role.STUDENT;
 
-		Role actual= ale.getRol();
+		Role actual= ale.getRole();
 
 		assertEquals(expected,actual);
 	}
