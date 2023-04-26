@@ -79,13 +79,9 @@
                 
 
     <legend>Datos personales:</legend>
-
+    <p>Email: <input type="text" name="Email" size="40" placeholder="correo electronico" th:field="*{email}"></p>
     <p>Nombre del Usuario: <input type="text" name="nombre" size="40" placeholder="Escriba su nombre" th:field="*{nombre}"></p>
-
-    
-    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>
-
-          
+    <p>Apellido1: <input type="text" name="apellido1" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido1}"></p>      
     <p>Apellido2: <input type="text" name="apellido2" size="40" placeholder="Escriba su segundo apellido" th:field="*{apellido2}"></p>
     <p>Rol: <input type="text" name="Rol" size="40" placeholder="Alumno o profesor" th:field="*{rol}"></p>
     <button type="submit">Guardar</button>

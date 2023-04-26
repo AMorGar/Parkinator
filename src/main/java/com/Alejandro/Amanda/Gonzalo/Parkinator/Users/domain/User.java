@@ -2,8 +2,6 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
 import java.util.Set;
 
-import org.hibernate.annotations.ManyToAny;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,25 +21,26 @@ public class User {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private String email;
     private Integer id;
     private String nombre;
     private String apellido1;
-    @ManyToMany(mappedBy = "includedIn")
     private String apellido2;
-    private Role rol;
+    private Role role;
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
  * @param apellido1 Este parametro iguala su valor al de la variable apellido1
  * @param apellido2 Este parametro iguala su valor al de la variable apellido2
  * @param rol Este parametro iguala su valor al de la variable rol
+ * @param email Este parametro iguala su valor al de la variable email
  */
-    public User(String nombre, String apellido1, String apellido2, Role rol) {
-        
+    public User(String email,String nombre, String apellido1, String apellido2, Role role) {
+        this.email = email;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
-        this.rol = rol;
+        this.role = role;
     }
 
     public User() {
@@ -52,6 +51,13 @@ public class User {
  */
     public Integer getId() {
         return this.id;
+    }
+/**
+ * Devuelve lo almacenado en el parametro
+ * @return Devuelve los datos guardados en el parametro email
+ */
+    public String getEmail() {
+        return this.email;
     }
 /**
  * Devuelve lo almacenado en el parametro
@@ -78,8 +84,8 @@ public class User {
  * Devuelve lo almacenado en el parametro
  * @return Devuelve los parametros guardados en el parametro rol
  */
-    public Role getRol() {
-        return this.rol;
+    public Role getRole() {
+        return role;
     }
 
 /**
@@ -89,6 +95,13 @@ public class User {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+/**
+ * Iguala el parametro a lo introducido
+ * @param nombre Este parametro guarda los datos de la variable nemail
+ */
+public void setEmail(String email) {
+    this.email = email;
+} 
 /**
  * Iguala el parametro a lo introducido
  * @param apellido1 Este parametro guarda los datos de la variable apellido1
@@ -107,8 +120,8 @@ public class User {
  * Iguala el parametro a lo introducido
  * @param rol Este parametro guarda los datos de la variable rol
  */
-    public void setRol(Role string) {
-        this.rol = string;
+    public void setRol(Role role) {
+        this.role = role;
     }
 /**
  * Iguala el parametro a lo introducido

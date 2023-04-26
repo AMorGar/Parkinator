@@ -22,7 +22,7 @@ public class Sorteos {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String idSorteo;
     private Status Estado;
-    @ManyToMany(mappedBy = "includedIn")
+
     private String Descripcion;
     private String Fecha;
 
