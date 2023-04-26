@@ -2,6 +2,7 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +24,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String email;
     private Integer id;
+    @Column(unique = true)
     private String nombre;
     private String apellido1;
     private String apellido2;

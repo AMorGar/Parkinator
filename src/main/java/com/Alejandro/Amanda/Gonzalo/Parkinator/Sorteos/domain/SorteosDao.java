@@ -11,6 +11,9 @@ import jakarta.validation.constraints.NotBlank;
 
 public class SorteosDao {
 
+    /**
+     * @NotBlank Usamos este parámetro para que los valores de estado y fecha tengan que ser rellenados obligatoriamente
+     */
     @NotBlank(message= "El estado del sorteo no puede estar vacío")
     private String Estado;
     private String Descripcion;
