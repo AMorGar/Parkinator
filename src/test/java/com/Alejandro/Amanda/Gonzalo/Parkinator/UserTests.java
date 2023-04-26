@@ -11,7 +11,7 @@ public class UserTests {
 	private User ale;
 	@BeforeEach
 	public void prepare(){
-		User ale = new User("David", "Perez", "Rios", Role.PROFESSOR);
+		ale = new User("David", "Perez", "Rios", Role.PROFESSOR);
 	}
 
 	@Test

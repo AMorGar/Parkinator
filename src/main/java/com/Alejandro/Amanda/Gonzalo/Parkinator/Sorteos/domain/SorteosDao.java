@@ -1,4 +1,7 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
+
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * @author Gonzalo Ruiz Azuar
  * @author Alejandro Moreno Garrido
@@ -8,8 +11,10 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain;
 
 public class SorteosDao {
 
+    @NotBlank(message= "El estado del sorteo no puede estar vacío")
     private String Estado;
     private String Descripcion;
+    @NotBlank(message= "Es obligatorio poner fecha para el sorteo")
     private String Fecha;
     
     public SorteosDao(){
