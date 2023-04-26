@@ -1,11 +1,15 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.adapter;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.Role;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.UserDao;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.service.UserService;
 /**
@@ -43,6 +47,8 @@ public class UserController {
  */
     @GetMapping("/CreateUser")
     public String showUserForm(Model model) {
+        List<Role> roles = Arrays.asList(Role.values());
+        model.addAttribute("roles", roles);
     UserDao userDao= new UserDao();
     model.addAttribute("userDao",userDao);
         return "formulario";

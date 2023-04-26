@@ -28,22 +28,22 @@ public class UserDao {
     @NotBlank(message = "El primer apellido es obligatorio.")
     private String apellido1;
     private String apellido2;
-    private String rol;
-    
+    private Role Role;
+    private String email;
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
  * @param apellido1 Este parametro iguala su valor al de la variable apellido1
  * @param apellido2 Este parametro iguala su valor al de la variable apellido2
- * @param rol Este parametro iguala su valor al de la variable rol
+ * @param Role Este parametro iguala su valor al de la variable rol
  * @param emial Este parametro iguala su valor al de la variable emial
  */
-    public UserDao(String email,String nombre, String apellido1, String apellido2, String rol) {
+    public UserDao(String email,String nombre, String apellido1, String apellido2, Role Role) {
         this.email = email;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
-        this.rol = rol;
+        this.Role = Role;
     }
 
     public UserDao() {
@@ -88,8 +88,8 @@ public String getEmail() {
  * Devuelve lo almacenado en el parametro
  * @return Devuelve los parametros guardados en el parametro rol
  */
-    public String getRol() {
-        return this.rol;
+    public Role getRole() {
+        return this.Role;
     }
 
 /**
@@ -124,8 +124,8 @@ public void setEmail(String email) {
  * Iguala el parametro a lo introducido
  * @param rol Este parametro guarda los datos de la variable rol
  */
-    public void setRol(String rol) {
-        this.rol = rol;
+    public Role setRole(Role Role) {
+        return this.Role = Role;
     }
 /**
  * Iguala el parametro a lo introducido
