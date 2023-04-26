@@ -1,5 +1,8 @@
 package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * Clase de acceso a datos de Usuario
  * @author Alejandro Moreno Garrido
@@ -12,12 +15,20 @@ package com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain;
 
 public class UserDao {
 
+    /**
+     * @param Email Se usa para que sea obligatorio que el valor que se introduzca sea un email
+     * @NotBlank Usamos este parámetro para que los valores de email, nombre y apellido tengan que ser rellenados obligatoriamente
+     */
+    @Email(message = "El formato del correo es inválido.")
+    @NotBlank(message = "El correo no puede estar vacío.")
+    private String email;
     private Integer id;
+    @NotBlank(message = "El nombre es obligatorio.")
     private String nombre;
+    @NotBlank(message = "El primer apellido es obligatorio.")
     private String apellido1;
     private String apellido2;
     private Role Role;
-    private String email;
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre

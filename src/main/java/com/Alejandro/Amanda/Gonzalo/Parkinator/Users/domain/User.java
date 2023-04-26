@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Sorteos.domain.Sorteos;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,6 +28,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private Integer id;
+    @Column(unique = true)
     private String nombre;
     private String apellido1;
     private String apellido2;
