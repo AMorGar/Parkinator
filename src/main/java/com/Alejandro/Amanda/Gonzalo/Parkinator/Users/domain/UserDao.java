@@ -35,15 +35,15 @@ public class UserDao {
  * @param nombre Este parametro iguala su valor al de la variable nombre
  * @param apellido1 Este parametro iguala su valor al de la variable apellido1
  * @param apellido2 Este parametro iguala su valor al de la variable apellido2
- * @param rol Este parametro iguala su valor al de la variable rol
+ * @param professor Este parametro iguala su valor al de la variable rol
  * @param emial Este parametro iguala su valor al de la variable emial
  */
-    public UserDao(String email,String nombre, String apellido1, String apellido2, String rol) {
+    public UserDao(String email,String nombre, String apellido1, String apellido2, Role professor) {
         this.email = email;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
-        this.rol = rol;
+        this.rol = professor;
     }
 
     public UserDao() {
