@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.Role;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.domain.UserDao;
 import com.Alejandro.Amanda.Gonzalo.Parkinator.Users.service.UserService;
+import com.Alejandro.Amanda.Gonzalo.Parkinator.core.Exceptions.UserExistsException;
+
+import jakarta.validation.Valid;
 /**
  * Redirige los datos introducidos por teclado 
  * @author Alejandro Moreno Garrido
@@ -56,12 +60,29 @@ public class UserController {
 /**
  * Redirecciona tras crear usuario
  * @param userDao Crea usuarios
- * @return Redirecciona hacia la lsita de usuarios creados tras el guardado.
+ * @return Redirecciona hacia la lista de usuarios creados tras el guardado.
  */
     @PostMapping("/CreateUser")
-    public String createUser(@ModelAttribute  UserDao userDao ){
+    public String createUser(@Valid @ModelAttribute ("userDao")  UserDao userDao, BindingResult bindingResult, Model model ){
+        /**
+         * Por si hay algún error en la validación automática con userDao se encarga de devolver el formulario 
+         */
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("userDao", userDao);
+            return "formulario";
+        }
 
+        try { 
         this.userService.register(userDao);
+        }
+        /**
+         * En caso de que ya exista un usuario con ese correo se encarga de devolver el formulario nuevamente
+         */
+        catch (UserExistsException exception) {
+            model.addAttribute("userDao", userDao);
+            bindingResult.reject("email","Ya existe un usuario con el correo");
+            return "formulario";
+        }
     return "redirect:/Users"; 
     }
 
