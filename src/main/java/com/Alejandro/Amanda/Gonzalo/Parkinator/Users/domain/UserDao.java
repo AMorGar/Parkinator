@@ -29,6 +29,7 @@ public class UserDao {
     private String apellido1;
     private String apellido2;
     private Role Role;
+
 /**
  * Copia los datos introducidos por teclados en los parametros de la aplicacion
  * @param nombre Este parametro iguala su valor al de la variable nombre
